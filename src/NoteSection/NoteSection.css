@@ -1,0 +1,38 @@
+html, body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.note-section{
+    flex: 3;
+}
+.note-section{
+    margin: 5%;
+}
+.add-folder, .add-note, .delete-button{
+    cursor: pointer;
+}
+
+.add-note{
+    display: inline-block;
+    padding:2% 5%;
+    text-align: center;
+    border: 2px solid black;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+}
+
+.add-note:hover{
+    background-color: black;
+    color: white;   
+}
+
+@media only screen and (max-width: 800px){
+    .note-section{
+        margin-left: 10%;
+    }
+    .add-note{
+        width: 100px;
+    }
+}

@@ -1,0 +1,54 @@
+input, textarea,label, select, .submit{
+    display: block;
+    margin: auto;
+}
+h2{
+    text-align: center;
+}
+
+textarea{
+    height: 5em;
+    width: 25em;
+}
+.add-note-button{
+    flex: 3;
+}
+
+label{
+    margin-top: 25px;
+    text-align: center;
+}
+
+button{
+margin-top: 5px;
+border: 2px solid black;
+}
+
+button:hover{
+cursor: pointer;
+background-color: black;
+color: white;
+}
+
+button:disabled{
+    color: grey;
+    background-color: white;
+    cursor: default;
+}
+
+.error{    
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: red;
+}
+
+
+@media only screen and (max-width: 800px){
+    textarea{
+        width: 40%;
+    }
+    input{
+        border: 1px solid black;
+    }
+}

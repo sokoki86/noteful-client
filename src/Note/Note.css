@@ -1,0 +1,70 @@
+html, body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+.folder, .note, .back-button{
+    border: 2px solid black;
+}
+.folder, .back-button{
+    padding: 10%;
+    text-align: center;
+    font-weight: bold;
+}
+button{
+    background-color: white;
+}
+
+.note{
+    display: flex;
+    padding: 1% 7%;
+    margin-bottom: 20px;
+    height: 100px;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}   
+
+.note .delete-button{
+    display: inline;
+    border: 2px solid black;
+    height: 25px;
+    width: 100px;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    padding-top: 3px;
+    text-align: center;
+}
+.bottom-elements{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between  
+}
+
+.delete-button{
+    text-decoration: none;
+    color: black;
+}
+
+.delete-button:focus{
+    border:3px solid black;
+}
+
+.delete-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.note:hover{
+    box-shadow: 5px 10px 18px #888888;
+}
+.title{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+@media only screen and (max-width: 800px){
+    .note {
+        width: 150px
+    }
+}

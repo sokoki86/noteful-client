@@ -1,0 +1,14 @@
+html, body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.note-section{
+    flex: 3;
+}
+.note-section{
+    margin: 50px;
+}   
+.add-folder, .add-note, .delete-button{
+    cursor: pointer;
+}

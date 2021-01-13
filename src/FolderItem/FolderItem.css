@@ -1,0 +1,25 @@
+html, body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.folder, .back-button{
+    padding: 10%;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    background-color: #000000;
+    color: white
+}
+.folder, .note, .back-button{
+    border: 2px solid black;
+}
+
+.folder{
+    min-width: 75px;
+}

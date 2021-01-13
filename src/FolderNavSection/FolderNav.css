@@ -1,0 +1,31 @@
+.folder-sectionnv{
+    margin: 5%;
+}
+
+.folder-sectionnv{
+    flex: 1;
+}
+
+.folder, .note, .back-button{
+    border: 2px solid black;
+}
+
+.folder, .back-button{
+    padding: 10%;
+    text-align: center;
+    font-weight: bold;
+}
+.back-button{
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.back-button:focus{
+    border: 5px solid black;
+}
+
+.back-button:hover{
+    background-color: black;
+    color: white;
+}
