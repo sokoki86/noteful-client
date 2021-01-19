@@ -41,7 +41,7 @@ class App extends Component {
   getNotesAndFolders() {
     let error;
     console.log(config.API_TOKEN)
-    fetch(`http://localhost:8000/api/folders`, {headers: {Authorization: `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.API_ENDPOINT}/folders`, {headers: {Authorization: `Bearer ${config.API_TOKEN}`}})
       .then((res) => {
         if (!res.ok) error = { code: res.status };
         return res.json();
@@ -55,7 +55,7 @@ class App extends Component {
       }).catch(error=>{
         this.setState({...this.state, folderLoadError: true})
       });
-    fetch(`http://localhost:8000/api/notes`, {headers: {Authorization: `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.API_ENDPOINT}/notes`, {headers: {Authorization: `Bearer ${config.API_TOKEN}`}})
       .then((res) => {
         if (!res.ok) error = { code: res.status };
         return res.json();

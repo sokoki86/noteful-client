@@ -15,7 +15,7 @@ export default class AddFolder extends React.Component{
     handleSubmit(e){
         e.preventDefault()
         let newFolder = JSON.stringify({name : this.state.name.value})
-        fetch(`http://localhost:8000/api/folders/`, {method: 'POST', headers: {"content-type": "application/json", "Authorization": `Bearer ${config.API_TOKEN}`}, body: newFolder })
+        fetch(`${config.API_ENDPOINT}/folders/`, {method: 'POST', headers: {"content-type": "application/json", "Authorization": `Bearer ${config.API_TOKEN}`}, body: newFolder })
         .then(res =>{ 
             if(!res.ok) {
                 throw new Error('Something went wrong'); // throw an error

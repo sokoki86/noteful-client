@@ -8,7 +8,7 @@ import config from '../config'
 export default class Note extends React.Component{
     deleteNote(noteId, callback){
         let error
-        fetch(`http://localhost:8000/api/notes/${noteId}`, {method: 'DELETE', headers: {
+        fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {method: 'DELETE', headers: {
             'content-type': 'application/json',
             "Authorization": `Bearer ${config.API_TOKEN}`
           }}).then(res =>{
