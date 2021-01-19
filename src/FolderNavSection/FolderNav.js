@@ -1,8 +1,8 @@
 import React from 'react'
-import './FolderSectionNV.css'
+import './FolderNav.css'
 import NotefulContext from '../NotefulContext'
 
-export default class FolderSectionNV extends React.Component{
+ class FolderNavSection extends React.Component{
     static contextType = NotefulContext
     getFolderName(){
         console.log(this.context)
@@ -30,3 +30,5 @@ export default class FolderSectionNV extends React.Component{
         return <div></div>
     }
 }
+
+export default FolderNavSection

@@ -5,7 +5,7 @@ import Header from "./Header/Header";
 import FolderSection from "./FolderSection/FolderSection";
 import NoteView from "./NoteView/NoteView";
 import NoteSection from "./NoteSection/NoteSection";
-import FolderSectionNV from "./FolderSectionNV/FolderSectionNV";
+import FolderNavSection from "./FolderNavSection/FolderNav";
 import NotefulContext from "./NotefulContext";
 import AddFolder from "./AddFolder/AddFolder";
 import AddNote from "./AddNote/AddNote";
@@ -40,6 +40,7 @@ class App extends Component {
   };
   getNotesAndFolders() {
     let error;
+    console.log(config.API_TOKEN)
     fetch(`http://localhost:8000/api/folders`, {headers: {Authorization: `Bearer ${config.API_TOKEN}`}})
       .then((res) => {
         if (!res.ok) error = { code: res.status };
@@ -99,7 +100,7 @@ class App extends Component {
             <Route exact path="/" render={(props) => <NoteLoadError><NoteSection {...props} /></NoteLoadError>} />
             <Route exact path="/folder/:folderId" component={FolderSection} />
             <Route exact path="/folder/:folderId" component={NoteSection} />
-            <Route exact path="/note/:noteId" component={FolderSectionNV} />
+            <Route exact path="/note/:noteId" component={FolderNavSection} />
             <Route exact path="/note/:noteId" component={NoteView} />
             <Route exact path="/add-folder" component={FolderSection} />
             <Route exact path="/add-folder" render={(props) => <FormError><AddFolder {...props} /></FormError>} />
